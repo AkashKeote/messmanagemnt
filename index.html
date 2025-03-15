@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Mess Management System Wireframes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f0f0f0;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2ECC71;
+    }
+    .wireframes-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .phone-wireframe {
+      width: 300px;
+      height: 600px;
+      background: white;
+      border-radius: 30px;
+      padding: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-bottom: 10px;
+      color: #666;
+    }
+    .green-header {
+      background: #2ECC71;
+      color: white;
+      padding: 15px;
+      border-radius: 15px 15px 0 0;
+      margin: -15px -15px 15px -15px;
+    }
+    .screen-title {
+      text-align: center;
+      margin-bottom: 5px;
+      color: #2ECC71;
+      font-weight: bold;
+    }
+    .section-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+    }
+    .meal-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      align-items: center;
+    }
+    .bottom-nav {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      background: white;
+      border-top: 1px solid #eee;
+      padding: 10px 0;
+    }
+    .nav-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 10px;
+      color: #666;
+    }
+    .nav-item.active {
+      color: #2ECC71;
+    }
+    .nav-icon {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    .badge {
+      background: #2ECC71;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-size: 10px;
+      margin-left: 5px;
+    }
+    .qr-code {
+      width: 100px;
+      height: 100px;
+      background: #f5f5f5;
+      margin: 10px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .progress-bar {
+      height: 8px;
+      background: #f0f0f0;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #2ECC71;
+    }
+    .scenario-box {
+      background: #E3F2FD;
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    .scenario-title {
+      font-weight: bold;
+      color: #1565C0;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Smart Mess Management System Wireframes</h1>
+  
+  <div class="wireframes-container">
+    <!-- Screen 1: Login/Signup -->
+    <div class="phone-wireframe">
+      <div class="status-bar">
+        <span>9:41 AM</span>
+        <span>📶 📊 🔋</span>
+      </div>
+      <div class="screen-title">1. Login/Signup Screen</div>
+      
+      <div style="text-align: center; margin: 30px 0;">
+        <div style="font-size: 24px; font-weight: bold; color: #2ECC71;">MessMate</div>
+        <div style="font-size: 12px; color: #666; margin-top: 5px;">Smart Mess Management System</div>
+      </div>
+      
+      <div class="input-field">Email / ID Number</div>
+      <div class="input-field">Password</div>
+      
+      <div class="button">Login</div>
+      <div class="outline-button">Signup</div>
+      
+      <div style="text-align: center; margin: 20px 0; font-size: 14px; color: #666;">Or sign in with</div>
+      
+      <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+        <div class="button" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 5px;">
+          <span>👤</span> <span style="font-size: 12px;">Face Recognition</span>
+        </div>
+        <div class="button" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 5px;">
+          <span>📲</span> <span style="font-size: 12px;">RFID/NFC</span>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 10px;">
+        <div style="font-size: 14px; margin-bottom: 10px;">Login as:</div>
+        <div style="display: flex; gap: 10px;">
+          <div class="outline-button" style="flex: 1; font-size: 12px;">Student</div>
+          <div class="outline-button" style="flex: 1; font-size: 12px;">Admin</div>
+          <div class="outline-button" style="flex: 1; font-size: 12px;">NGO</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Screen 2: Student Dashboard -->
+    <div class="phone-wireframe">
+      <div class="status-bar">
+        <span>9:41 AM</span>
+        <span>📶 📊 🔋</span>
+      </div>
+      <div class="green-header">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div style="font-size: 18px; font-weight: bold;">Hi, Akash!</div>
+            <div style="font-size: 12px; opacity: 0.8;">Saturday, 15 March 2025</div>
+          </div>
+          <div style="font-size: 12px; background: white; color: #2ECC71; padding: 5px 10px; border-radius: 15px;">
+            520 Points 🌟
+          </div>
+        </div>
+      </div>
+      
+      <div class="screen-title">2. Student Dashboard</div>
+      
+      <div class="alert-box" style="display: flex; align-items: center; gap: 5px;">
+        <span>💧</span> <span>Wellness Alert: Time to hydrate! It's been 3 hours.</span>
+      </div>
+      
+      <div class="section-title">AI Meal Prediction</div>
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <div style="font-weight: bold;">Today's Recommended</div>
+          <div style="font-size: 12px; color: #666;">15 Mar</div>
+        </div>
+        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+          <div style="width: 60px; height: 60px; background: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center;">🍲</div>
+          <div style="flex: 1;">
+            <div style="font-weight: bold;">Paneer Butter Masala</div>
+            <div style="font-size: 12px; color: #666; margin: 3px 0;">Lunch • 350 calories</div>
+            <div style="display: flex; gap: 5px;">
+              <div style="font-size: 10px; background: #e3f2fd; color: #1565C0; padding: 2px 5px; border-radius: 10px;">Weather Match 🌞</div>
+              <div style="font-size: 10px; background: #e8f5e9; color: #2e7d32; padding: 2px 5px; border-radius: 10px;">Festival Special</div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 5px;">
+          <div class="button" style="flex: 1; font-size: 12px;">Pre-book</div>
+          <div class="outline-button" style="flex: 1; font-size: 12px;">View Menu</div>
+        </div>
+      </div>
+      
+      <div class="section-title">Nutrition Meter</div>
+      <div class="card">
+        <div class="circle-progress">
+          <div style="text-align: center;">
+            <div class="progress-circle" style="width: 60px; height: 60px;">
+              <div class="progress-text">65%</div>
+            </div>
+            <div style="font-size: 10px; margin-top: 5px;">Calories</div>
+          </div>
+          <div style="text-align: center;">
+            <div class="progress-circle" style="width: 60px; height: 60px;">
+              <div class="progress-text">42%</div>
+            </div>
+            <div style="font-size: 10px; margin-top: 5px;">Protein</div>
+          </div>
+          <div style="text-align: center;">
+            <div class="progress-circle" style="width: 60px; height: 60px;">
+              <div class="progress-text">78%</div>
+            </div>
+            <div style="font-size: 10px; margin-top: 5px;">Vitamins</div>
+          </div>
+        </div>
+        <div style="font-size: 12px; text-align: center;">
+          Daily goal: 1,250 / 2,100 calories
+        </div>
+      </div>
+      
+      <div class="section-title">Quick Actions</div>
+      <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+        <div style="flex: 1; text-align: center;">
+          <div style="width: 40px; height: 40px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px auto; color: #2ECC71;">🗳️</div>
+          <div style="font-size: 10px;">Meal Voting</div>
+        </div>
+        <div style="flex: 1; text-align: center;">
+          <div style="width: 40px; height: 40px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px auto; color: #2ECC71;">👥</div>
+          <div style="font-size: 10px;">Guest Booking</div>
+        </div>
+        <div style="flex: 1; text-align: center;">
+          <div style="width: 40px; height: 40px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px auto; color: #2ECC71;">🎁</div>
+          <div style="font-size: 10px;">Redeem Points</div>
+        </div>
+        <div style="flex: 1; text-align: center;">
+          <div style="width: 40px; height: 40px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px auto; color: #2ECC71;">📊</div>
+          <div style="font-size: 10px;">My Stats</div>
+        </div>
+      </div>
+      
+      <div class="bottom-nav">
+        <div class="nav-item active">
+          <div class="nav-icon">🏠</div>
+          <div>Home</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">🍽️</div>
+          <div>Meals</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">💰</div>
+          <div>Pay</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">🏆</div>
+          <div>Rewards</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">⚙️</div>
+          <div>Settings</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Screen 3: Meal Planning -->
+    <div class="phone-wireframe">
+      <div class="status-bar">
+        <span>9:41 AM</span>
+        <span>📶 📊 🔋</span>
+      </div>
+      <div class="green-header" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div style="font-size: 18px; font-weight: bold;">Meal Planning</div>
+        </div>
+        <div style="font-size: 20px;">🔍</div>
+      </div>
+      
+      <div class="screen-title">3. Meal Planning Screen</div>
+      
+      <div class="tab-bar">
+        <div class="tab active">Weekly</div>
+        <div class="tab">Monthly</div>
+        <div class="tab">Custom</div>
+      </div>
+      
+      <div style="display: flex; justify-content: space-between; margin-bottom: 10px; overflow-x: auto; padding-bottom: 5px;">
+        <div style="min-width: 40px; text-align: center;">
+          <div style="font-size: 10px; color: #666;">Mon</div>
+          <div style="width: 30px; height: 30px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 3px auto;">14</div>
+        </div>
+        <div style="min-width: 40px; text-align: center;">
+          <div style="font-size: 10px; color: #666;">Tue</div>
+          <div style="width: 30px; height: 30px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 3px auto;">15</div>
+        </div>
+        <div style="min-width: 40px; text-align: center;">
+          <div style="font-size: 10px; color: #666;">Wed</div>
+          <div style="width: 30px; height: 30px; background: #2ECC71; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 3px auto;">16</div>
+        </div>
+        <div style="min-width: 40px; text-align: center;">
+          <div style="font-size: 10px; color: #666;">Thu</div>
+          <div style="width: 30px; height: 30px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 3px auto;">17</div>
+        </div>
+        <div style="min-width: 40px; text-align: center;">
+          <div style="font-size: 10px; color: #666;">Fri</div>
+          <div style="width: 30px; height: 30px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 3px auto;">18</div>
+        </div>
+        <div style="min-width: 40px; text-align: center;">
+          <div style="font-size: 10px; color: #666;">Sat</div>
+          <div style="width: 30px; height: 30px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 3px auto;">19</div>
+        </div>
+        <div style="min-width: 40px; text-align: center;">
+          <div style="font-size: 10px; color: #666;">Sun</div>
+          <div style="width: 30px; height: 30px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 3px auto;">20</div>
+        </div>
+      </div>
+      
+      <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+        <div style="font-weight: bold;">Wednesday, 16 Mar 2025</div>
+        <div style="font-size: 12px; color: #666;">🌡️ 31°C</div>
+      </div>
+      
+      <div class="section-title">Meal Filters</div>
+      <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+        <div style="flex: 1; display: flex; align-items: center; justify-content: space-between; padding: 8px; background: #f5f5f5; border-radius: 8px;">
+          <span style="font-size: 12px;">Gluten Free</span>
+          <div class="toggle-switch"></div>
+        </div>
+        <div style="flex: 1; display: flex; align-items: center; justify-content: space-between; padding: 8px; background: #f5f5f5; border-radius: 8px;">
+          <span style="font-size: 12px;">Vegan</span>
+          <div class="toggle-switch active"></div>
+        </div>
+      </div>
+      
+      <div class="section-title">Breakfast (7:30 - 9:30 AM)</div>
+      <div class="card">
+        <div class="meal-item">
+          <div>
+            <div style="font-weight: bold;">Poha</div>
+            <div style="font-size: 10px; color: #666;">230 cal</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="font-size: 10px; background: #e3f2fd; color: #1565C0; padding: 2px 5px; border-radius: 10px;">🌞 Summer Special</div>
+            <div style="font-size: 14px;">➕</div>
+          </div>
+        </div>
+        <div class="meal-item">
+          <div>
+            <div style="font-weight: bold;">Upma</div>
+            <div style="font-size: 10px; color: #666;">210 cal</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="font-size: 14px;">➕</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-title">Lunch (12:30 - 2:30 PM)</div>
+      <div class="card">
+        <div class="meal-item">
+          <div>
+            <div style="font-weight: bold;">Pav Bhaji</div>
+            <div style="font-size: 10px; color: #666;">340 cal</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="font-size: 10px; background: #e8f5e9; color: #2e7d32; padding: 2px 5px; border-radius: 10px;">AI Suggested</div>
+            <div style="font-size: 14px;">➕</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-title">Portion Size Adjustment</div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <div style="font-size: 12px;">Small</div>
+        <div style="flex: 1; height: 4px; background: #e0e0e0; border-radius: 2px; position: relative;">
+          <div style="position: absolute; top: -6px; left: 60%; width: 16px; height: 16px; background: #2ECC71; border-radius: 50%;"></div>
+        </div>
+        <div style="font-size: 12px;">Large</div>
+      </div>
+      <div style="font-size: 12px; text-align: center; color: #2ECC71; margin-bottom: 15px;">
+        Medium-small portion reduces waste by 12%
+      </div>
+      
+      <div class="bottom-nav">
+        <div class="nav-item">
+          <div class="nav-icon">🏠</div>
+          <div>Home</div>
+        </div>
+        <div class="nav-item active">
+          <div class="nav-icon">🍽️</div>
+          <div>Meals</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">💰</div>
+          <div>Pay</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">🏆</div>
+          <div>Rewards</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">⚙️</div>
+          <div>Settings</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Screen 4: Attendance & Payments -->
+    <div class="phone-wireframe">
+      <div class="status-bar">
+        <span>9:41 AM</span>
+        <span>📶 📊 🔋</span>
+      </div>
+      <div class="green-header">
+        <div style="font-size: 18px; font-weight: bold;">Attendance & Payments</div>
+      </div>
+      
+      <div class="screen-title">4. Attendance & Payments Screen</div>
+      
+      <div class="video-feed">
+        <div style="text-align: center;">
+          <div style="margin-bottom: 5px;">📹 Face Recognition</div>
+          <div style="font-size: 12px; color: #aaa;">Position your face in the frame</div>
+        </div>
+      </div>
+      
+      <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+        <div class="button" style="flex: 1; font-size: 12px;">Scan Face</div>
+        <div class="outline-button" style="flex: 1; font-size: 12px;">Scan RFID</div>
+      </div>
+      
+      <div class="section-title">Pay-as-you-eat Calculator</div>
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+          <div>
+            <div style="font-weight: bold;">Today's Meal</div>
+            <div style="font-size: 12px; color: #666;">15 Mar, Lunch</div>
+          </div>
+          <div style="font-weight: bold;">₹75</div>
+        </div>
+        
+        <div class="meal-item" style="padding: 8px 0;">
+          <div style="font-size: 12px;">Lunch (Regular)</div>
+          <div style="font-size: 12px;">₹60</div>
+        </div>
+        <div class="meal-item" style="padding: 8px 0;">
+          <div style="font-size: 12px;">Extra Roti (x2)</div>
+          <div style="font-size: 12px;">₹15</div>
+        </div>
+        
+        <div style="margin-top: 10px; padding-top: 10px; border-top: 1px dashed #eee;">
+          <div style="display: flex; justify-content: space-between; font-weight: bold;">
+            <div>Total</div>
+            <div>₹75</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-title">Payment Methods</div>
+      <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+        <div class="outline-button" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 5px;">
+          <span>💳</span> <span style="font-size: 12px;">Card</span>
+        </div>
+        <div class="outline-button" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 5px;">
+          <span>📱</span> <span style="font-size: 12px;">UPI</span>
+        </div>
+        <div class="outline-button" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 5px;">
+          <span>💸</span> <span style="font-size: 12px;">Wallet</span>
+        </div>
+      </div>
+      
+      <div class="section-title">Attendance History</div>
+      <div class="card">
+        <div style="font-size: 12px; margin-bottom: 10px;">March 2025</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+          <div style="width: 30px; height: 30px; background: #e8f5e9; color: #2e7d32; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">1</div>
+          <div style="width: 30px; height: 30px; background: #e8f5e9; color: #2e7d32; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">2</div>
+          <div style="width: 30px; height: 30px; background: #e8f5e9; color: #2e7d32; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">3</div>
+          <div style="width: 30px; height: 30px; background: #ffebee; color: #c62828; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">4</div>
+          <div style="width: 30px; height: 30px; background: #e8f5e9; color: #2e7d32; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">5</div>
+          <div style="width: 30px; height: 30px; background: #e8f5e9; color: #2e7d32; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">6</div>
+          <div style="width: 30px; height: 30px; background: #e3f2fd; color: #1565C0; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">7</div>
+        </div>
+      </div>
+      
+      <div class="bottom-nav">
+        <div class="nav-item">
+          <div class="nav-icon">🏠</div>
+          <div>Home</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">🍽️</div>
+          <div>Meals</div>
+        </div>
+        <div class="nav-item active">
+          <div class="nav-icon">💰</div>
+          <div>Pay</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">🏆</div>
+          <div>Rewards</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">⚙️</div>
+          <div>Settings</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Screen 5: Rewards & Sustainability -->
+    <div class="phone-wireframe">
+      <div class="status-bar">
+        <span>9:41 AM</span>
+        <span>📶 📊 🔋</span>
+      </div>
+      <div class="green-header">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div style="font-size: 18px; font-weight: bold;">Rewards</div>
+          <div style="font-size: 14px; background: white; color: #2ECC71; padding: 5px 10px; border-radius: 15px;">
+            520 Points 🌟
+          </div>
+        </div>
+      </div>
+      
+      <div class="screen-title">5. Rewards & Sustainability Screen</div>
+      
+      <div class="section-title">Your Impact</div>
+      <div class="card">
+        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+          <div style="flex: 1; text-align: center;">
+            <div style="font-size: 18px; font-weight: bold;">14kg</div>
+            <div style="font-size: 10px; color: #666;">Food Waste Saved</div>
+          </div>
+          <div style="flex: 1; text-align: center;">
+            <div style="font-size: 18px; font-weight: bold;">32L</div>
+            <div style="font-size: 10px; color: #666;">Water Saved</div>
+          </div>
+          <div style="flex: 1; text-align: center;">
+            <div style="font-size: 18px; font-weight: bold;">7kg</div>
+            <div style="font-size: 10px; color: #666;">CO₂ Reduced</div>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 65%;"></div>
+        </div>
+        <div style="font-size: 12px; text-align: center;">
+          You're in the top 15% of sustainable eaters!
+        </div>
+      </div>
+      
+      <div class="section-title">Reward Categories</div>
+      <div style="display: flex; gap: 10px; margin-bottom: 15px; overflow-x: auto; padding-bottom: 5px;">
+        <div style="min-width: 80px; text-align: center;">
+          <div style="width: 60px; height: 60px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px auto; color: #2ECC71;">🍽️</div>
+          <div style="font-size: 10px;">Free Meals</div>
+        </div>
+        <div style="min-width: 80px; text-align: center;">
+          <div style="width: 60px; height: 60px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px auto; color: #2ECC71;">🚲</div>
+          <div style="font-size: 10px;">Campus Store</div>
+        </div>
+        <div style="min-width: 80px; text-align: center;">
+          <div style="width: 60px; height: 60px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px auto; color: #2ECC71;">🌱</div>
+          <div style="font-size: 10px;">Plant a Tree</div>
+        </div>
+        <div style="min-width: 80px; text-align: center;">
+          <div style="width: 60px; height: 60px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px auto; color: #2ECC71;">🎁</div>
+          <div style="font-size: 10px;">Donations</div>
+        </div>
+      </div>
+      
+      <div class="section-title">Featured Rewards</div>
+      <div class="card">
+        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+          <div style="width: 60px; height: 60px; background: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center;">🥤</div>
+          <div style="flex: 1;">
+            <div style="font-weight: bold;">Free Beverage Coupon</div>
+            <div style="font-size: 12px; color: #666; margin: 3px 0;">Valid for any beverage at campus cafe</div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div style="font-size: 10px; background: #e3f2fd; color: #1565C0; padding: 2px 5px; border-radius: 10px;">150 points</div>
+              <div class="outline-button" style="font-size: 10px; padding: 5px 10px; margin: 0;">Redeem</div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <div style="width: 60px; height: 60px; background: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center;">🍕</div>
+          <div style="flex: 1;">
+            <div style="font-weight: bold;">Pizza Party (4 People)</div>
+            <div style="font-size: 12px; color: #666; margin: 3px 0;">Special weekend treat for you & friends</div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div style="font-size: 10px; background: #e3f2fd; color: #1565C0; padding: 2px 5px; border-radius: 10px;">450 points</div>
+              <div class="outline-button" style="font-size: 10px; padding: 5px 10px; margin: 0;">Redeem</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bottom-nav">
+        <div class="nav-item">
+          <div class="nav-icon">🏠</div>
+          <div>Home</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">🍽️</div>
+          <div>Meals</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">💰</div>
+          <div>Pay</div>
+        </div>
+        <div class="nav-item active">
+          <div class="nav-icon">🏆</div>
+          <div>Rewards</div>
+        </div>
+        <div class="nav-item">
+          <div class="nav-icon">⚙️</div>
+          <div>Settings</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Screen 6: Admin Dashboard -->
+    <div class="phone-wireframe">
+      <div class="status-bar">
+        <span>9:41 AM</span>
+        <span>📶 📊 🔋</span>
+      </div>
+      <div class="green-header">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div style="font-size: 18px; font-weight: bold;">Admin Dashboard</div>
+            <div style="font-size: 12px; opacity: 0.8;">Saturday, 15 March 2025</div>
+          </div>
+          <div style="font-size: 14px; background: white; color: #2ECC71; padding: 5px 10px; border-radius: 15px;">
+            Manager
+          </div>
+        </div>
+      </div>
+      
+      <div class="screen-title">6. Admin Dashboard</div>
+      
+      <div class="alert-box" style="display: flex; align-items: center; gap: 5px;">
+        <span>⚠️</span> <span>Inventory Alert: Low on Rice (15kg left)</span>
+      </div>
+      
+      <div class="section-title">Today's Attendance</div>
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+          <div>Breakfast</div>
+          <div>342/500 (68%)</div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 68%;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+          <div>Lunch</div>
+          <div>478/500 (95%)</div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 95%;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+          <div>Dinner</div>
+          <div>Upcoming</div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+      
+      <div class="section-title">Real-time Metrics</div>
+      <div class="chart"></div>
+      <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+        <div style="flex: 1; text-align: center;">
+          <div style="font-size: 18px; font-weight: bold;">2.3kg</div>
+          <div style="font-size: 10px; color: #666;">Avg Waste/Person</div>
+        </div>
+        <div style="flex: 1; text-align: center;">
+          <div style="font-size: 18px; font-weight: bold;">₹42</div>
+          <div style="font-size: 10px; color: #666;">Avg Cost/Meal</div>
+        </div>
+        <div style="flex: 1; text-align: center;">
+          <div style="font-size: 18px; font-weight: bold;">4.2/5</div>
+          <div style="font-size: 10px; color: #666;">Satisfaction</div>
+        </div>
+      </div>
+      
+      <div class="section-title">Quick Actions</div>
+      <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+        <div class="button" style="flex: 1; font-size: 12px;">Generate Report</div>
+        <div class="button" style="flex: 1; font-size: 12px;">Update Menu</div>
+      </div>
+      <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+        <div class="outline-button" style="flex: 1; font-size: 12px;">Inventory</div>
+        <div class="outline-button" style="flex: 1; font-size: 12px;">Staff Mgmt</div>
+      </div>
+    </div>
+    
+    <!-- Screen 7: NGO Portal -->
+    <div class="phone-wireframe">
+      <div class="status-bar">
+        <span>9:41 AM</span>
+        <span>📶 📊 🔋</span>
+      </div>
+      <div class="green-header">
+        <div style="font-size: 18px; font-weight: bold;">NGO Portal</div>
+      </div>
+      
+      <div class="screen-title">7. NGO Portal Screen</div>
+      
+      <div class="section-title">Today's Donations</div>
+      <div class="card">
+        <div class="meal-item">
+          <div>
+            <div style="font-weight: bold;">FoodForAll</div>
+            <div style="font-size: 12px; color: #666;">12kg Rice, 8kg Vegetables</div>
+          </div>
+          <div class="badge">Pending</div>
+        </div>
+        <div class="meal-item">
+          <div>
+            <div style="font-weight: bold;">HungerFree</div>
+            <div style="font-size: 12px; color: #666;">15kg Bread, 5kg Fruits</div>
+          </div>
+          <div class="badge" style="background: #2e7d32;">Collected</div>
+        </div>
+      </div>
+      
+      <div class="section-title">Collection Schedule</div>
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+          <div>
+            <div style="font-weight: bold;">Tomorrow 10 AM</div>
+            <div style="font-size: 12px; color: #666;">FoodForAll - 20kg</div>
+          </div>
+          <div class="qr-code">QR</div>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <div>
+            <div style="font-weight: bold;">18 Mar 3 PM</div>
+            <div style="font-size: 12px; color: #666;">FeedIndia - 15kg</div>
+          </div>
+          <div class="qr-code">QR</div>
+        </div>
+      </div>
+      
+      <div class="section-title">Impact Metrics</div>
+      <div class="card">
+        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+          <div style="flex: 1; text-align: center;">
+            <div style="font-size: 18px; font-weight: bold;">1.2K</div>
+            <div style="font-size: 10px; color: #666;">Meals Donated</div>
+          </div>
+          <div style="flex: 1; text-align: center;">
+            <div style="font-size: 18px; font-weight: bold;">85%</div>
+            <div style="font-size: 10px; color: #666;">Utilization Rate</div>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 85%;"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Screen 8: Advanced Settings -->
+    <div class="phone-wireframe">
+      <div class="status-bar">
+        <span>9:41 AM</span>
+        <span>📶 📊 🔋</span>
+      </div>
+      <div class="green-header">
+        <div style="font-size: 18px; font-weight: bold;">Advanced Settings</div>
+      </div>
+      
+      <div class="screen-title">8. Settings Screen</div>
+      
+      <div class="section-title">Account</div>
+      <div class="card">
+        <div class="meal-item">
+          <div>👤 Profile Settings</div>
+          <div>➔</div>
+        </div>
+        <div class="meal-item">
+          <div>🔒 Change Password</div>
+          <div>➔</div>
+        </div>
+        <div class="meal-item">
+          <div>🚪 Logout</div>
+          <div>➔</div>
+        </div>
+      </div>
+      
+      <div class="section-title">Integrations</div>
+      <div class="card">
+        <div class="meal-item">
+          <div>📱 WhatsApp Bot</div>
+          <div class="toggle-switch active"></div>
+        </div>
+        <div class="meal-item">
+          <div>🗣️ Voice Commands</div>
+          <div class="toggle-switch"></div>
+        </div>
+        <div class="meal-item">
+          <div>🏦 ERP Sync</div>
+          <div class="toggle-switch active"></div>
+        </div>
+      </div>
+      
+      <div class="section-title">Advanced Features</div>
+      <div class="card">
+        <div class="meal-item">
+          <div>📡 IoT Device Setup</div>
+          <div>➔</div>
+        </div>
+        <div class="meal-item">
+          <div>📊 API Access</div>
+          <div>➔</div>
+        </div>
+        <div class="meal-item">
+          <div>🔗 Blockchain Explorer</div>
+          <div>➔</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="scenario-box">
+    <div class="scenario-title">Smart Mess Management System - Features Summary</div>
+    <ul style="padding-left: 20px; margin-bottom: 15px;">
+      <li>AI-powered meal prediction based on weather, upcoming events, and user preferences</li>
+      <li>Multiple authentication methods (ID/Password, Face Recognition, RFID/NFC)</li>
+      <li>Attendance tracking and absence prediction</li>
+      <li>Nutrition monitoring and personalized recommendations</li>
+      <li>Pay-as-you-eat and digital wallet integration</li>
+      <li>Food waste tracking with gamification rewards</li>
+      <li>Pre-booking system to reduce food waste</li>
+      <li>Portion size adjustment to match appetite</li>
+      <li>Sustainability metrics and impact visualization</li>
+      <li>Quick meal voting system for menu planning</li>
+      <li>Admin dashboard with real-time analytics</li>
+      <li>NGO portal for food donation coordination</li>
+    </ul>
+  </div>
+</body>
+</html>
